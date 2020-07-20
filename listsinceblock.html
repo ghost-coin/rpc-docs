@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - listsinceblock">
+    <meta name="description" content="Ghost Core RPC Docs - listsinceblock">
     <meta name="author" content="">
 
-    <title>listsinceblock - Particl Core RPC Docs</title>
+    <title>listsinceblock - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>listsinceblock - Particl RPC</h1>
+          <h1>listsinceblock - Ghost RPC</h1>
           
             <pre>listsinceblock ( &#34;blockhash&#34; target_confirmations include_watchonly include_removed )
 
@@ -51,7 +51,7 @@ Result:
 {
   &#34;transactions&#34;: [
     &#34;account&#34;:&#34;accountname&#34;,       (string) DEPRECATED. The account name associated with the transaction. Will be &#34;&#34; for the default account.
-    &#34;address&#34;:&#34;address&#34;,           (string) The particl address of the transaction. Not present for move transactions (category = move).
+    &#34;address&#34;:&#34;address&#34;,           (string) The ghost address of the transaction. Not present for move transactions (category = move).
     &#34;category&#34;:&#34;send|receive&#34;,     (string) The transaction category. &#39;send&#39; has negative amounts, &#39;receive&#39; has positive amounts.
     &#34;amount&#34;: x.xxx,          (numeric) The amount in PART. This is negative for the &#39;send&#39; category, and for the &#39;move&#39; category for moves 
                                           outbound. It is positive for the &#39;receive&#39; category, and for the &#39;move&#39; category for inbound funds.
@@ -80,18 +80,16 @@ Result:
 }
 
 Examples:
-&gt; particl-cli listsinceblock 
-&gt; particl-cli listsinceblock &#34;000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad&#34; 6
+&gt; ghost-cli listsinceblock 
+&gt; ghost-cli listsinceblock &#34;000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad&#34; 6
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;listsinceblock&#34;, &#34;params&#34;: [&#34;000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad&#34;, 6] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

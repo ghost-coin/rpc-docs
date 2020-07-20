@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - gettxout">
+    <meta name="description" content="Ghost Core RPC Docs - gettxout">
     <meta name="author" content="">
 
-    <title>gettxout - Particl Core RPC Docs</title>
+    <title>gettxout - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>gettxout - Particl RPC</h1>
+          <h1>gettxout - Ghost RPC</h1>
           
             <pre>gettxout &#34;txid&#34; n ( include_mempool )
 
@@ -53,8 +53,8 @@ Result:
      &#34;hex&#34; : &#34;hex&#34;,        (string) 
      &#34;reqSigs&#34; : n,          (numeric) Number of required signatures
      &#34;type&#34; : &#34;pubkeyhash&#34;, (string) The type, eg pubkeyhash
-     &#34;addresses&#34; : [          (array of string) array of particl addresses
-        &#34;address&#34;           (string) particl address
+     &#34;addresses&#34; : [          (array of string) array of ghost addresses
+        &#34;address&#34;           (string) ghost address
         ,...
      ]
   },
@@ -64,10 +64,10 @@ Result:
 Examples:
 
 Get unspent transactions
-&gt; particl-cli listunspent 
+&gt; ghost-cli listunspent 
 
 View the details
-&gt; particl-cli gettxout &#34;txid&#34; 1
+&gt; ghost-cli gettxout &#34;txid&#34; 1
 
 As a json rpc call
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;gettxout&#34;, &#34;params&#34;: [&#34;txid&#34;, 1] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
@@ -75,11 +75,9 @@ As a json rpc call
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

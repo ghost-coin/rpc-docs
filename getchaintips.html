@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - getchaintips">
+    <meta name="description" content="Ghost Core RPC Docs - getchaintips">
     <meta name="author" content="">
 
-    <title>getchaintips - Particl Core RPC Docs</title>
+    <title>getchaintips - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>getchaintips - Particl RPC</h1>
+          <h1>getchaintips - Ghost RPC</h1>
           
             <pre>getchaintips
 Return information about all known tips in the block tree, including the main chain as well as orphaned branches.
@@ -60,17 +60,15 @@ Possible values for status:
 5.  &#34;active&#34;                This is the tip of the active main chain, which is certainly valid
 
 Examples:
-&gt; particl-cli getchaintips 
+&gt; ghost-cli getchaintips 
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;getchaintips&#34;, &#34;params&#34;: [] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - getaccountaddress">
+    <meta name="description" content="Ghost Core RPC Docs - getaccountaddress">
     <meta name="author" content="">
 
-    <title>getaccountaddress - Particl Core RPC Docs</title>
+    <title>getaccountaddress - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,39 +25,37 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>getaccountaddress - Particl RPC</h1>
+          <h1>getaccountaddress - Ghost RPC</h1>
           
             <pre>getaccountaddress &#34;account&#34;
 
-DEPRECATED. Returns the current Particl address for receiving payments to this account.
+DEPRECATED. Returns the current Ghost address for receiving payments to this account.
 
 Arguments:
 1. &#34;account&#34;       (string, required) The account name for the address. It can also be set to the empty string &#34;&#34; to represent the default account. The account does not need to exist, it will be created and a new address created  if there is no account by the given name.
 
 Result:
-&#34;address&#34;          (string) The particl account address
+&#34;address&#34;          (string) The ghost account address
 
 Examples:
-&gt; particl-cli getaccountaddress 
-&gt; particl-cli getaccountaddress &#34;&#34;
-&gt; particl-cli getaccountaddress &#34;myaccount&#34;
+&gt; ghost-cli getaccountaddress 
+&gt; ghost-cli getaccountaddress &#34;&#34;
+&gt; ghost-cli getaccountaddress &#34;myaccount&#34;
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;getaccountaddress&#34;, &#34;params&#34;: [&#34;myaccount&#34;] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - listtransactions">
+    <meta name="description" content="Ghost Core RPC Docs - listtransactions">
     <meta name="author" content="">
 
-    <title>listtransactions - Particl Core RPC Docs</title>
+    <title>listtransactions - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>listtransactions - Particl RPC</h1>
+          <h1>listtransactions - Ghost RPC</h1>
           
             <pre>listtransactions ( &#34;account&#34; count skip include_watchonly)
 
@@ -50,7 +50,7 @@ Result:
   {
     &#34;account&#34;:&#34;accountname&#34;,       (string) DEPRECATED. The account name associated with the transaction. 
                                                 It will be &#34;&#34; for the default account.
-    &#34;address&#34;:&#34;address&#34;,           (string) The particl address of the transaction. Not present for 
+    &#34;address&#34;:&#34;address&#34;,           (string) The ghost address of the transaction. Not present for 
                                                 move transactions (category = move).
     &#34;category&#34;:&#34;send|receive|move|coinbase|stake|orphaned_stake&#34;, 
                                        (string) The transaction category. &#39;move&#39; is a local (off blockchain)
@@ -92,10 +92,10 @@ Result:
 Examples:
 
 List the most recent 10 transactions in the systems
-&gt; particl-cli listtransactions 
+&gt; ghost-cli listtransactions 
 
 List transactions 100 to 120
-&gt; particl-cli listtransactions &#34;*&#34; 20 100
+&gt; ghost-cli listtransactions &#34;*&#34; 20 100
 
 As a json rpc call
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;listtransactions&#34;, &#34;params&#34;: [&#34;*&#34;, 20, 100] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
@@ -103,11 +103,9 @@ As a json rpc call
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

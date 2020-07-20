@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - sendtoaddress">
+    <meta name="description" content="Ghost Core RPC Docs - sendtoaddress">
     <meta name="author" content="">
 
-    <title>sendtoaddress - Particl Core RPC Docs</title>
+    <title>sendtoaddress - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,21 +25,21 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>sendtoaddress - Particl RPC</h1>
+          <h1>sendtoaddress - Ghost RPC</h1>
           
             <pre>sendtoaddress &#34;address&#34; amount ( &#34;comment&#34; &#34;comment-to&#34; subtractfeefromamount &#34;narration&#34; replaceable conf_target &#34;estimate_mode&#34;)
 
 Send an amount to a given address.
 
 Arguments:
-1. &#34;address&#34;     (string, required) The particl address to send to.
+1. &#34;address&#34;     (string, required) The ghost address to send to.
 2. amount          (numeric or string, required) The amount in PART to send. eg 0.1
 3. &#34;comment&#34;     (string, optional) A comment used to store what the transaction is for. 
                             This is not part of the transaction, just kept in your wallet.
@@ -62,19 +62,17 @@ Result:
 &#34;txid&#34;           (string) The transaction id.
 
 Examples:
-&gt; particl-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1
-&gt; particl-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1 &#34;donation&#34; &#34;seans outpost&#34;
-&gt; particl-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1 &#34;&#34; &#34;&#34; true
+&gt; ghost-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1
+&gt; ghost-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1 &#34;donation&#34; &#34;seans outpost&#34;
+&gt; ghost-cli sendtoaddress &#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34; 0.1 &#34;&#34; &#34;&#34; true
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;sendtoaddress&#34;, &#34;params&#34;: [&#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR&#34;, 0.1, &#34;donation&#34;, &#34;seans outpost&#34;] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

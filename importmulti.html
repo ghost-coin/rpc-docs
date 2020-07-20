@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - importmulti">
+    <meta name="description" content="Ghost Core RPC Docs - importmulti">
     <meta name="author" content="">
 
-    <title>importmulti - Particl Core RPC Docs</title>
+    <title>importmulti - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>importmulti - Particl RPC</h1>
+          <h1>importmulti - Ghost RPC</h1>
           
             <pre>importmulti &#34;requests&#34; ( &#34;options&#34; )
 
@@ -67,8 +67,8 @@ Note: This call can take minutes to complete if rescan is true, during that time
 may report that the imported keys, addresses or scripts exists but related transactions are still missing.
 
 Examples:
-&gt; particl-cli importmulti &#39;[{ &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my address&gt;&#34; }, &#34;timestamp&#34;:1455191478 }, { &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my 2nd address&gt;&#34; }, &#34;label&#34;: &#34;example 2&#34;, &#34;timestamp&#34;: 1455191480 }]&#39;
-&gt; particl-cli importmulti &#39;[{ &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my address&gt;&#34; }, &#34;timestamp&#34;:1455191478 }]&#39; &#39;{ &#34;rescan&#34;: false}&#39;
+&gt; ghost-cli importmulti &#39;[{ &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my address&gt;&#34; }, &#34;timestamp&#34;:1455191478 }, { &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my 2nd address&gt;&#34; }, &#34;label&#34;: &#34;example 2&#34;, &#34;timestamp&#34;: 1455191480 }]&#39;
+&gt; ghost-cli importmulti &#39;[{ &#34;scriptPubKey&#34;: { &#34;address&#34;: &#34;&lt;my address&gt;&#34; }, &#34;timestamp&#34;:1455191478 }]&#39; &#39;{ &#34;rescan&#34;: false}&#39;
 
 Response is an array with the same size as the input that has the execution result :
   [{ &#34;success&#34;: true } , { &#34;success&#34;: false, &#34;error&#34;: { &#34;code&#34;: -1, &#34;message&#34;: &#34;Internal Server Error&#34;} }, ... ]
@@ -76,11 +76,9 @@ Response is an array with the same size as the input that has the execution resu
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

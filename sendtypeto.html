@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - sendtypeto">
+    <meta name="description" content="Ghost Core RPC Docs - sendtypeto">
     <meta name="author" content="">
 
-    <title>sendtypeto - Particl Core RPC Docs</title>
+    <title>sendtypeto - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>sendtypeto - Particl RPC</h1>
+          <h1>sendtypeto - Ghost RPC</h1>
           
             <pre>sendtypeto &#34;typein&#34; &#34;typeout&#34; [{address: , amount: , narr: , subfee:},...] (&#34;comment&#34; &#34;comment-to&#34; ringsize inputs_per_sig test_fee coin_control)
 
@@ -42,7 +42,7 @@ Arguments:
 1. &#34;typein&#34;          (string, required) part/blind/anon
 2. &#34;typeout&#34;         (string, required) part/blind/anon
 3. &#34;outputs&#34;         (json, required) Array of output objects
-    3.1 &#34;address&#34;    (string, required) The particl address to send to.
+    3.1 &#34;address&#34;    (string, required) The ghost address to send to.
     3.2 &#34;amount&#34;     (numeric or string, required) The amount in PART to send. eg 0.1
     3.x &#34;narr&#34;       (string, optional) Up to 24 character narration sent with the transaction.
     3.x &#34;subfee&#34;     (boolean, optional, default=false) The fee will be deducted from the amount being sent.
@@ -74,16 +74,14 @@ Result:
 &#34;txid&#34;              (string) The transaction id.
 
 Examples:
-&gt; particl-cli sendtypeto anon part &#34;[{\&#34;address\&#34;:\&#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR\&#34;,\&#34;amount\&#34;:0.1}]&#34;
+&gt; ghost-cli sendtypeto anon part &#34;[{\&#34;address\&#34;:\&#34;PbpVcjgYatnkKgveaeqhkeQBFwjqR7jKBR\&#34;,\&#34;amount\&#34;:0.1}]&#34;
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

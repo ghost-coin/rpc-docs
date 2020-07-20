@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - dumpwallet">
+    <meta name="description" content="Ghost Core RPC Docs - dumpwallet">
     <meta name="author" content="">
 
-    <title>dumpwallet - Particl Core RPC Docs</title>
+    <title>dumpwallet - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>dumpwallet - Particl RPC</h1>
+          <h1>dumpwallet - Ghost RPC</h1>
           
             <pre>dumpwallet &#34;filename&#34;
 
@@ -42,7 +42,7 @@ Note that if your wallet contains keys which are not derived from your HD seed (
 only backing up the seed itself, and must be backed up too (e.g. ensure you back up the whole dumpfile).
 
 Arguments:
-1. &#34;filename&#34;    (string, required) The filename with path (either absolute or relative to particld)
+1. &#34;filename&#34;    (string, required) The filename with path (either absolute or relative to ghostd)
 
 Result:
 {                           (json object)
@@ -50,17 +50,15 @@ Result:
 }
 
 Examples:
-&gt; particl-cli dumpwallet &#34;test&#34;
+&gt; ghost-cli dumpwallet &#34;test&#34;
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;dumpwallet&#34;, &#34;params&#34;: [&#34;test&#34;] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
 
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.

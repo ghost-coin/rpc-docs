@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=1200px, shrink-to-fit=yes">
-    <meta name="description" content="Particl Core RPC Docs - lockunspent">
+    <meta name="description" content="Ghost Core RPC Docs - lockunspent">
     <meta name="author" content="">
 
-    <title>lockunspent - Particl Core RPC Docs</title>
+    <title>lockunspent - Ghost Core RPC Docs</title>
 
     <link href="./bootstrap.min.css" rel="stylesheet">
   </head>
@@ -25,14 +25,14 @@
 
 
     <nav class="navbar  navbar-dark bg-dark ">
-      <a class="navbar-brand" href="/">Particl Core RPC docs</a>
+      <a class="navbar-brand" href="/">Ghost Core RPC docs</a>
     </nav>
 
     <main role="main" class="container-fluid" style="margin-top: 1pc;">
 
       <div class="row">
         <div class="col-8 col-lg-9 col-xl-10">
-          <h1>lockunspent - Particl RPC</h1>
+          <h1>lockunspent - Ghost RPC</h1>
           
             <pre>lockunspent unlock ([{&#34;txid&#34;:&#34;txid&#34;,&#34;vout&#34;:n},...])
 
@@ -61,16 +61,16 @@ true|false    (boolean) Whether the command was successful or not
 Examples:
 
 List the unspent transactions
-&gt; particl-cli listunspent 
+&gt; ghost-cli listunspent 
 
 Lock an unspent transaction
-&gt; particl-cli lockunspent false &#34;[{\&#34;txid\&#34;:\&#34;a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\&#34;,\&#34;vout\&#34;:1}]&#34;
+&gt; ghost-cli lockunspent false &#34;[{\&#34;txid\&#34;:\&#34;a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\&#34;,\&#34;vout\&#34;:1}]&#34;
 
 List the locked transactions
-&gt; particl-cli listlockunspent 
+&gt; ghost-cli listlockunspent 
 
 Unlock the transaction again
-&gt; particl-cli lockunspent true &#34;[{\&#34;txid\&#34;:\&#34;a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\&#34;,\&#34;vout\&#34;:1}]&#34;
+&gt; ghost-cli lockunspent true &#34;[{\&#34;txid\&#34;:\&#34;a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\&#34;,\&#34;vout\&#34;:1}]&#34;
 
 As a json rpc call
 &gt; curl --user myusername --data-binary &#39;{&#34;jsonrpc&#34;: &#34;1.0&#34;, &#34;id&#34;:&#34;curltest&#34;, &#34;method&#34;: &#34;lockunspent&#34;, &#34;params&#34;: [false, &#34;[{\&#34;txid\&#34;:\&#34;a08e6907dbbd3d809776dbfc5d82e371b764ed838b5655e72f463568df1aadf0\&#34;,\&#34;vout\&#34;:1}]&#34;] }&#39; -H &#39;content-type: text/plain;&#39; http://127.0.0.1:51935/
@@ -78,11 +78,9 @@ As a json rpc call
 </pre>
             <hr>
           
+
           <p>
-          This is a website, created out of frustration with uncomplete and outdated Particl Core RPC documentation online.
-          </p>
-          <p>
-          Particl version: 0.16.0.1 
+          Ghost version: 0.16.0.1 
           </p>
           <p>
           Note that the RPC is from a regtest node (for completeness), so it includes some additional calls that a regular node doesn't have.
